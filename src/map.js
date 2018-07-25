@@ -53,7 +53,7 @@ export function renderMap (layer) {
         'ibutors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
         ' Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
 
-  var map = L
+  var map = L 
     .map('map').setView([30.267153, -97.7430608], 10)
 
   L

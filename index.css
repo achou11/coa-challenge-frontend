@@ -5,13 +5,20 @@
     --box-shadow-color: #d33809;
 }
 
+::-moz-selection, ::selection {
+    background-color: var(--box-shadow-color);
+}
+
+:focus {
+    outline: var(--intimidating-color) auto 5px;
+}
+
 html {
     display: flex;
     justify-content: center;
 }
 
 body {
-    height: 100vh;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -20,8 +27,12 @@ body {
     background-color: #ff8c20;
 }
 
+summary {
+    width: fit-content
+}
+
 #map {
-    height: 80%;
+    height: 75vh;
     width: 100%;
     -webkit-box-shadow: 0 10px 6px -6px var(--box-shadow-color);
     -moz-box-shadow: 0 10px 6px -6px var(--box-shadow-color);
@@ -31,6 +42,10 @@ body {
 
 .title {
     font-family: var(--title-font);
+}
+
+.description {
+    margin-bottom: 1em;
 }
 
 .content {
