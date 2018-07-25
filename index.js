@@ -1,4 +1,4 @@
-import { settings } from './settings.js'
+import { config } from './config.js'
 
 // GeoJSON layer with dog info
 var layer = {
@@ -95,7 +95,7 @@ function createPointFeature(data) {
   return point
 }
 
-L.MakiMarkers.accessToken = settings.mapboxToken
+L.MakiMarkers.accessToken = config.mapboxToken
 
 var dogIcon = L.MakiMarkers.icon({
   icon: "dog-park",
@@ -112,7 +112,7 @@ var dogIconSelected = L.MakiMarkers.icon({
 })
 
 function renderMap() {
-  let layerUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + settings.mapboxToken
+  let layerUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + config.mapboxToken
   let attributionText = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contr' +
     'ibutors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
     ' Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
@@ -130,7 +130,7 @@ function renderMap() {
       attribution: attributionText,
       maxZoom: 18,
       id: 'mapbox.light',
-      accessToken: settings.mapboxToken
+      accessToken: config.mapboxToken
     })
     .addTo(map);
 
