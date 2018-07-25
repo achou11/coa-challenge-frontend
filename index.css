@@ -1,3 +1,8 @@
+:root {
+    --title-font: "Lucida Console", Monaco, monospace;
+    --content-font: "Courier New", Courier, monospace;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +10,42 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #ff8c20;
 }
 
+hr {
+    width: 100px;
+}
 #map {
     height: 75%;
     width: 75%;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+    border: 1px solid black;
+}
+
+.title {
+    font-family: var(--title-font);
+}
+
+.content {
+    font-family: var(--content-font);
+    width: 80%;
+}
+
+.source {
+    color: rgb(131, 37, 37);
+}
+
+a.source:visited {
+    color: rgb(20, 20 ,20);
+}
+.intimidating-text {
+    color: rgb(131, 37, 37);
+    text-shadow: 3px 3px 2px red;
 }

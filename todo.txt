@@ -1,2 +1,4 @@
 - Figure out what to do with dogs who don't have associated lat/long from API
+    - Entry for Lorena Nuniga has undefined lat/long
+    - Entry for Randall Burt has discrepancy between address and lat/long provided
 - Add some bio card feature for selected dog

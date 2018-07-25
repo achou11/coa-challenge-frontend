@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keyword" content="dog, dogs, doggo, doggos, dangerous, austin, texas" />
+    <meta name="description" content="A simple map of declared dangerous dogs in Austin." />
     <title>Dangerous Doggos</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -9,11 +12,16 @@
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>
-    <script src="./Leaflet.MakiMarkers.js"></script>
+    <script src="./src/Leaflet.MakiMarkers.js"></script>
     <link rel="stylesheet", href="./index.css" />
   </head>
   <body>
-    <h1>Dangerous Doggos</h1>
+    <h1 class="title intimidating-text">Dangerous Doggos</h1>
+    <div class="description content">
+      <p>"No declared Dangerous Dog in the City of Austin and Travis County should ever be running at large. They are court ordered to be restrained at all times and should be wearing a large tag identifying them as a Dangerous Dog. They have attacked in the past. The owner is required to provide $100,000 in financial responsibility. If they attack again the court could order them put to sleep." <a class="source" href="https://data.austintexas.gov/Health-and-Community-Services/Declared-Dangerous-Dogs/ykw4-j3aj" target="_blank" rel="noopener">Source</a>
+      </p>
+
+    </div>
     <div id="map"></div>
   </body>
   <script type="module" src="./index.js"></script>
