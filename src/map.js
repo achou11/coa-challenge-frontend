@@ -54,12 +54,7 @@ export function renderMap (layer) {
         ' Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
 
   var map = L
-    .map('map', {
-      zoomControl: false
-    })
-    .setView([
-      30.267153, -97.7430608
-    ], 10)
+    .map('map').setView([30.267153, -97.7430608], 10)
 
   L
     .tileLayer(layerUrl, {
@@ -103,8 +98,10 @@ export function renderMap (layer) {
           layer.bindPopup(
             `
             <h3 class="title">${props.dogName}</h3>
-            <p class="content">A ${props.dogColor} ${props.dogBreed}.</p>
-            <p class="content">${props.dogName} belongs to ${props.ownerFirstName} ${props.ownerLastName}.</p>
+            <p class="content">
+              A ${props.dogColor} ${props.dogBreed}. 
+              ${props.dogName} belongs to ${props.ownerFirstName} ${props.ownerLastName}.
+            </p>
             `
           )
         }
@@ -112,13 +109,14 @@ export function renderMap (layer) {
     })
     .addTo(map)
 
+  /*
   L
     .control
     .zoom({
       position: 'bottomleft'
     })
     .addTo(map)
-
+  */
   map.on('click', e => {
     clearHighlightedMarkers(e.target._layers)
   })
